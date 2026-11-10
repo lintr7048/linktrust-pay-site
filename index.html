@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="リンクトラスト・ペイ株式会社 — キャッシュレス決済・AIソリューション・EVモビリティ">
+<style>[hidden]{display:none!important}img{max-width:100%}</style>
+<title>LinkTrust Pay 公式サイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: 罫線区切りの企業サイト。ヒーロー右に3領域の事業ボード → 事業 → 強み → 沿革 → 相談窓口 → セキュリティ → 会社概要 */
+:root{
+  --ink:#0E1B33; --paper:#F5F8FB; --surface:#FFFFFF; --line:#D5DEE8; --muted:#4F5E73;
+  --accent:#0F8C86; --accent-soft:#DDF1EF; --band:#0E1B33; --band-fg:#F5F8FB; --band-muted:#A9B8CB; --band-line:#22385E; --band-accent:#5FD3C9;
+  --f-display:"IBM Plex Sans JP","Hiragino Sans",sans-serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ink:#E6EDF5;--paper:#0A1424;--surface:#101E33;--line:#22334D;--muted:#9AABC0;--accent:#3CC4BA;--accent-soft:#12302F;
+  --band:#060E1A;--band-fg:#E6EDF5;--band-muted:#93A4BA;--band-line:#1C2D47;--band-accent:#5FD3C9;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#E6EDF5;--paper:#0A1424;--surface:#101E33;--line:#22334D;--muted:#9AABC0;--accent:#3CC4BA;--accent-soft:#12302F;
+  --band:#060E1A;--band-fg:#E6EDF5;--band-muted:#93A4BA;--band-line:#1C2D47;--band-accent:#5FD3C9;color-scheme:dark}
+html[lang="zh-CN"]{--f-display:"Noto Sans SC","PingFang SC",sans-serif;--f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+html[lang="en"]{--f-display:"IBM Plex Sans",system-ui,sans-serif;--f-body:"IBM Plex Sans",system-ui,sans-serif}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.85}
+html[lang="en"] body{line-height:1.65}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);margin:0;line-height:1.35;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-width:0}
+.brand b{font-family:var(--f-display);font-size:16px;display:block;line-height:1.2}
+.brand small{font-size:11px;color:var(--muted);display:block}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;flex:none}
+.lang button{font:600 12px var(--f-mono);padding:7px 10px;border:0;background:transparent;color:var(--muted);cursor:pointer;min-height:36px;min-width:40px}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:14px;padding:11px 20px;border-radius:6px;text-decoration:none;border:1px solid var(--ink);cursor:pointer}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{color:var(--accent);border-color:var(--accent)}
+@media (max-width:980px){.nav ul{display:none}}
+@media (max-width:620px){.nav .btn{display:none}}
+
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding-block:72px 64px}
+.hero>*{min-width:0}
+.hero h1{font-size:clamp(32px,4.4vw,52px);margin-top:14px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{margin-top:20px;color:var(--muted);font-size:17px;max-width:34em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 28px;margin:28px 0 0;padding:0;list-style:none}
+.facts li{display:flex;flex-direction:column}
+.facts b{font-family:var(--f-mono);font-size:20px;font-weight:600;font-variant-numeric:tabular-nums}
+.facts span{font-size:12px;color:var(--muted)}
+.board{background:var(--band);color:var(--band-fg);border-radius:14px;padding:22px;display:grid;gap:10px}
+.board .head{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;color:var(--band-muted);letter-spacing:.1em;padding-bottom:8px;border-bottom:1px dashed var(--band-line)}
+.board a{display:grid;grid-template-columns:96px 1fr auto;gap:12px;align-items:center;padding:14px;border:1px solid var(--band-line);border-radius:10px;text-decoration:none}
+.board a:hover{border-color:var(--band-accent)}
+.board .code{font-family:var(--f-mono);font-size:11px;color:var(--band-accent);letter-spacing:.06em}
+.board b{font-family:var(--f-display);font-size:15px;display:block;line-height:1.4}
+.board small{font-size:12px;color:var(--band-muted);display:block;line-height:1.55}
+.board .arr{color:var(--band-muted);font-family:var(--f-mono)}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:36px;padding-block:44px}}
+@media (max-width:440px){.board a{grid-template-columns:1fr auto}.board .code{grid-column:1/-1}}
+
+section{padding-block:80px;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:220px 1fr;gap:32px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(24px,3vw,34px)}
+.sec-head p{color:var(--muted);margin-top:12px;max-width:42em}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr;gap:10px}section{padding-block:56px}}
+
+.domain{margin-top:48px}
+.domain:first-of-type{margin-top:0}
+.dhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding-bottom:14px;margin-bottom:20px;border-bottom:2px solid var(--ink)}
+.dhead h3{font-size:22px}
+.dhead span{font-family:var(--f-mono);font-size:12px;color:var(--accent);letter-spacing:.1em}
+.dhead p{color:var(--muted);font-size:14px;flex-basis:100%}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.card h4{font-family:var(--f-display);font-size:17px;margin:0;line-height:1.4}
+.card p{font-size:14.5px;color:var(--muted)}
+.card .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.card .chips span{font-size:12px;font-family:var(--f-mono);padding:3px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.card .more{margin-top:auto;font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--accent);text-decoration:none}
+.card .more:hover{text-decoration:underline}
+.card.feature{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+
+.band{background:var(--band);color:var(--band-fg);border-top:0}
+.band .sec-head p{color:var(--band-muted)}
+.band .eyebrow{color:var(--band-accent)}
+.str{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+.str>div{border-top:2px solid var(--band-accent);padding-top:18px}
+.str h3{font-size:19px;margin-bottom:10px}
+.str p{color:var(--band-muted);font-size:15px}
+@media (max-width:820px){.str{grid-template-columns:1fr;gap:28px}}
+
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);display:grid;gap:26px}
+.timeline li{position:relative;padding-left:28px;display:grid;grid-template-columns:110px 1fr;gap:16px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.timeline time{font-family:var(--f-mono);font-size:14px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+.timeline p{font-size:15px}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:2px}}
+
+.consult{display:grid;grid-template-columns:1fr 1.15fr;gap:48px}
+.consult>*{min-width:0}
+.topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.topics span{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--surface)}
+.contact-lines{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px}
+.contact-lines dt{color:var(--muted);font-family:var(--f-mono);font-size:12px;padding-top:2px}
+.contact-lines dd{margin:0;font-family:var(--f-mono);font-size:14px;word-break:break-all}
+form{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:28px;display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-size:13px;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 12px;width:100%}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.status{font-size:14px;font-weight:700;color:var(--accent)}
+@media (max-width:900px){.consult{grid-template-columns:1fr}}
+@media (max-width:560px){.row{grid-template-columns:1fr}}
+
+.sec-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.sec-list>div{padding:24px 26px;border-bottom:1px solid var(--line)}
+.sec-list>div:nth-child(odd){border-right:1px solid var(--line)}
+.sec-list>div:nth-last-child(-n+2){border-bottom:0}
+.sec-list h3{font-size:16px;margin-bottom:6px}
+.sec-list p{font-size:14px;color:var(--muted)}
+@media (max-width:720px){.sec-list{grid-template-columns:1fr}.sec-list>div:nth-child(odd){border-right:0}.sec-list>div:nth-last-child(2){border-bottom:1px solid var(--line)}}
+
+.profile{border-top:1px solid var(--line);margin:0}
+.profile>div{display:grid;grid-template-columns:200px 1fr;gap:24px;padding-block:16px;border-bottom:1px solid var(--line);font-size:15px}
+.profile dt{color:var(--muted)}
+.profile dd{margin:0}
+.profile .num{font-family:var(--f-mono);font-size:14px;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.profile>div{grid-template-columns:1fr;gap:2px}}
+
+footer{border-top:1px solid var(--line);padding-block:36px;font-size:13px;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+.foot nav{display:flex;flex-wrap:wrap;gap:18px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <svg width="32" height="32" viewBox="0 0 30 30" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="7" fill="var(--ink)"/><path d="M9 9v12h7" stroke="var(--paper)" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="21" cy="11" r="2.6" fill="var(--accent)"/></svg>
+      <span><b>LinkTrust Pay</b><small data-k="corp">リンクトラスト・ペイ株式会社</small></span>
+    </a>
+    <ul>
+      <li><a href="#business" data-k="nav1">事業内容</a></li>
+      <li><a href="#strengths" data-k="nav2">強み</a></li>
+      <li><a href="#history" data-k="nav3">沿革</a></li>
+      <li><a href="#company" data-k="nav4">会社概要</a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="ja" aria-pressed="true">JP</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-solid" href="#contact" data-k="navcta">お問い合わせ</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <span class="eyebrow">Payment × AI × Mobility</span>
+      <h1 data-k="h1" data-html>決済を起点に、<br><em>AIとモビリティ</em>へ。</h1>
+      <p class="lead" data-k="lead">2009年の創業以来、訪日客向けQRコード決済から始まり、国内外の決済をひとつにまとめるマルチ決済、IoT決済、AIソリューション、EVモビリティへと事業を広げてきました。日本と中国をつなぐキャッシュレスの基盤から、次の産業をつくります。</p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="#contact" data-k="cta1">導入・提携のご相談</a>
+        <a class="btn btn-ghost" href="#business" data-k="cta2">事業を見る</a>
+      </div>
+      <ul class="facts">
+        <li><b>2009</b><span data-k="f1">創業</span></li>
+        <li><b>3</b><span data-k="f2">事業領域</span></li>
+        <li><b>JP / CN / EN</b><span data-k="f3">対応言語</span></li>
+      </ul>
+    </div>
+    <nav class="board" aria-label="Business">
+      <div class="head"><span>LINKTRUST PAY</span><span>3 DOMAINS</span></div>
+      <a href="#d-pay"><span class="code">PAYMENT</span><span><b data-k="b1">キャッシュレス決済</b><small data-k="b1s">マルチ決済・決済端末・IoT決済・越境EC</small></span><span class="arr" aria-hidden="true">→</span></a>
+      <a href="#d-ai"><span class="code">AI</span><span><b data-k="b2">AIソリューション</b><small data-k="b2s">AI Gateway・AI面接・AIデバイス・受託開発</small></span><span class="arr" aria-hidden="true">→</span></a>
+      <a href="#d-ev"><span class="code">MOBILITY</span><span><b data-k="b3">EVモビリティ</b><small data-k="b3s">バッテリー交換・EV販売・統合管理基盤</small></span><span class="arr" aria-hidden="true">→</span></a>
+    </nav>
+  </div>
+
+  <section id="business">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Business</span>
+        <div>
+          <h2 data-k="bizT">事業内容</h2>
+          <p data-k="bizP">モバイル決済プラットフォームを土台に、システム開発・OEM提供・インバウンド集客まで一貫して手がけています。</p>
+        </div>
+      </div>
+
+      <div class="domain" id="d-pay">
+        <div class="dhead"><span>PAYMENT</span><h3 data-k="d1">キャッシュレス決済</h3></div>
+        <div class="grid">
+          <article class="card"><h4 data-k="p1">グローバルマルチ決済</h4><p data-k="p1d">国内外のQRコード決済をひとつのプラットフォームに統合。複数の決済ブランドを同時に申し込み、まとめて導入できます。</p><div class="chips"><span>UnionPay</span><span>Alipay</span><span>WeChat Pay</span><span data-k="p1c">国内QR</span></div></article>
+          <article class="card"><h4 data-k="p2">決済端末「smart-pay」</h4><p data-k="p2d">通信環境に左右されにくい決済端末。店舗のレジ周りにすぐ設置でき、訪日客と国内客の両方の支払いに対応します。</p></article>
+          <article class="card"><h4 data-k="p3">決済＋（プラス）</h4><p data-k="p3d">QRコード決済とIoTを組み合わせ、自動販売機・コインロッカー・駐車場などの無人設備をキャッシュレス化します。</p></article>
+          <article class="card"><h4 data-k="p4">越境EC決済</h4><p data-k="p4d">メールで送る決済リンクで、日中間の越境ECや事前予約に対応。円と人民元を即時換算し、日中の自動翻訳にも対応。API連携も可能です。</p></article>
+          <article class="card"><h4 data-k="p5">医療インバウンド決済</h4><p data-k="p5d">訪日医療観光客の高額な医療費の支払いに対応する決済ソリューションです。</p></article>
+          <article class="card"><h4 data-k="p6">AI顔認証決済・テーブルオーダー</h4><p data-k="p6d">顔認証による決済や、飲食店向けのテーブルオーダーシステムを提供します。</p></article>
+        </div>
+      </div>
+
+      <div class="domain" id="d-ai">
+        <div class="dhead"><span>AI</span><h3 data-k="d2">AIソリューション</h3></div>
+        <div class="grid">
+          <article class="card feature"><h4>LinkTrust AI Gateway</h4><p data-k="a1d">Claude・GPT・Gemini から DeepSeek・Qwen など中国の主要モデルまで、1つのAPIキーと円建て残高で利用できるAI専用の決済・管理基盤。銀行振込チャージとインボイスに対応します。</p><a class="more" href="ai-gateway/" data-k="a1m">サービスサイトへ →</a></article>
+          <article class="card"><h4 data-k="a2">AI面接「IKEMEN（イケ面）」</h4><p data-k="a2d">AIが一次面接を担い、採用の工数を減らす面接SaaS。クラウド版と、店舗や会場に置けるキオスク端末版があります。</p></article>
+          <article class="card"><h4 data-k="a3">AIデバイス</h4><p data-k="a3d">好きな声で会話できる「AI推し声コースター」や、店舗向けの「AI分身ロボットシステム」など、AIを組み込んだ製品を企画・開発しています。</p></article>
+          <article class="card"><h4 data-k="a4">AI受託開発</h4><p data-k="a4d">社内データと連携するAI、業務を代行するAIエージェント、既存システムとの連携など、お客様の業務に合わせて設計・実装します。</p><a class="more" href="#contact" data-k="a4m">AI相談窓口へ →</a></article>
+        </div>
+      </div>
+
+      <div class="domain" id="d-ev">
+        <div class="dhead"><span>MOBILITY</span><h3 data-k="d3">EVモビリティ</h3></div>
+        <div class="grid">
+          <article class="card"><h4 data-k="e1">EVバッテリー交換</h4><p data-k="e1d">充電を待たずに走り続けられる、バッテリー交換型の電動モビリティサービスです。</p></article>
+          <article class="card"><h4 data-k="e2">EV・電動バイク販売</h4><p data-k="e2d">電動バイクの輸入販売を行っています。業界団体と共同で「小型モビリティ共同プロジェクト」を推進しています。</p></article>
+          <article class="card"><h4 data-k="e3">EV統合管理プラットフォーム「LMMP」</h4><p data-k="e3d">車両・バッテリー・決済をまとめて管理し、EVを使った事業の運用を支えるプラットフォームです。</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="strengths" class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Strengths</span>
+        <div><h2 data-k="sT">リンクトラスト・ペイの強み</h2><p data-k="sP">お金の流れを扱う会社だからこそ、AIやモビリティも「課金・精算まで含めて」運用できます。</p></div>
+      </div>
+      <div class="str">
+        <div><h3 data-k="s1">決済ブランドとの直接の取り組み</h3><p data-k="s1d">申し込みから加盟店審査、運用まで一括で対応。事業者への入金は日本円で行うため、外貨の換算は不要です。</p></div>
+        <div><h3 data-k="s2">日本と中国をつなぐ</h3><p data-k="s2d">訪日客の決済代行から始まった事業です。日本語・中国語・英語で、両国の企業と利用者を支えます。</p></div>
+        <div><h3 data-k="s3">ソフトもハードも自社で</h3><p data-k="s3d">決済プラットフォーム、端末、AIデバイス、EV管理基盤まで、自社で企画・開発しています。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="history">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">History</span><div><h2 data-k="hT">沿革</h2></div></div>
+      <ol class="timeline">
+        <li><time>2009.04</time><p data-k="h1t">リンクトラスト・ペイ株式会社を設立。訪日中国人客向けのスマホQRコード決済の代行業務を開始</p></li>
+        <li><time>2016</time><p data-k="h2t">越境EC向けに、銀聯・支付宝・微信の3ブランドに同時対応した決済サービスを提供</p></li>
+        <li><time>—</time><p data-k="h3t">国内のQRコード決済を取り込み、グローバルマルチ決済へ拡大。決済端末「smart-pay」、IoT決済「決済＋」を展開</p></li>
+        <li><time>2024.03</time><p data-k="h4t">AI面接官システムの提供を開始</p></li>
+        <li><time>2026</time><p data-k="h5t">生成AI統合ゲートウェイ「LinkTrust AI Gateway」を発表</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap consult">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 style="font-size:clamp(24px,3vw,34px);margin-top:10px" data-k="cT">お問い合わせ・AI相談窓口</h2>
+        <p style="color:var(--muted);margin-top:14px;max-width:32em" data-k="cP">決済の導入、AIの活用、EV事業との連携など、まだ構想段階のご相談も歓迎します。</p>
+        <div class="topics">
+          <span data-k="t1">訪日客向け決済を導入したい</span>
+          <span data-k="t2">無人設備をキャッシュレス化したい</span>
+          <span data-k="t3">複数AIの請求をまとめたい</span>
+          <span data-k="t4">採用面接を効率化したい</span>
+          <span data-k="t5">AIを使った製品を作りたい</span>
+        </div>
+        <dl class="contact-lines">
+          <dt>TEL</dt><dd>03-5641-6818</dd>
+          <dt>MAIL</dt><dd>lintr@linktrust-pay.com</dd>
+          <dt>WEB</dt><dd>www.linktrust-pay.com</dd>
+        </dl>
+      </div>
+      <form id="form" novalidate>
+        <div class="row">
+          <label for="f-company"><span data-k="l1">会社名</span><input id="f-company" autocomplete="organization"></label>
+          <label for="f-name"><span data-k="l2">ご担当者名</span><input id="f-name" autocomplete="name"></label>
+        </div>
+        <div class="row">
+          <label for="f-email"><span data-k="l3">メールアドレス</span><input id="f-email" type="email" autocomplete="email"></label>
+          <label for="f-topic"><span data-k="l4">ご相談の分野</span>
+            <select id="f-topic">
+              <option value="pay" data-k="o1">キャッシュレス決済</option>
+              <option value="gateway">AI Gateway</option>
+              <option value="ikemen" data-k="o2">AI面接 IKEMEN</option>
+              <option value="custom" data-k="o3">AI受託開発・AIデバイス</option>
+              <option value="ev" data-k="o4">EVモビリティ</option>
+              <option value="other" data-k="o5">その他</option>
+            </select>
+          </label>
+        </div>
+        <label for="f-msg"><span data-k="l5">ご相談内容</span><textarea id="f-msg"></textarea></label>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+          <button class="btn btn-solid" type="submit" data-k="send">送信する</button>
+          <span class="status" id="status" role="status" hidden></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="security">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Security</span><div><h2 data-k="secT">情報セキュリティ基本方針</h2><p data-k="secP">決済事業者として、お客様の情報資産を守るために次の方針で取り組みます。</p></div></div>
+      <div class="sec-list">
+        <div><h3 data-k="q1">法令・契約の遵守</h3><p data-k="q1d">個人情報保護法などの関係法令と、決済ブランド・お客様との契約上の義務を守ります。</p></div>
+        <div><h3 data-k="q2">データの取り扱い</h3><p data-k="q2d">お預かりしたデータは目的の範囲内でのみ利用し、AIの学習に無断で利用しません。</p></div>
+        <div><h3 data-k="q3">アクセス管理</h3><p data-k="q3d">権限を必要最小限に絞り、管理画面やAPIへのアクセスを記録・監視します。</p></div>
+        <div><h3 data-k="q4">継続的な改善</h3><p data-k="q4d">社員教育と定期的な見直しを行い、事故発生時は速やかに報告・対応します。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Company</span><div><h2 data-k="coT">会社概要</h2></div></div>
+      <dl class="profile">
+        <div><dt data-k="c1">社名</dt><dd>リンクトラスト・ペイ株式会社<br>LinkTrust Pay Co., Ltd.</dd></div>
+        <div><dt data-k="c2">設立</dt><dd data-k="c2v">2009年4月</dd></div>
+        <div><dt data-k="c3">代表者</dt><dd data-k="c3v">代表取締役　林 挺然</dd></div>
+        <div><dt data-k="c4">資本金</dt><dd data-k="c4v">5,409万5,000円</dd></div>
+        <div><dt data-k="c5">法人番号</dt><dd class="num">2010001124068</dd></div>
+        <div><dt data-k="c6">所在地</dt><dd data-k="c6v" data-html>〒163-0649<br>東京都新宿区西新宿1-25-1 新宿センタービル49階</dd></div>
+        <div><dt data-k="c7">事業内容</dt><dd data-k="c7v">キャッシュレス決済プラットフォームの運営・システム開発・OEM提供／インバウンド集客支援／AIソリューションの開発・提供／EVモビリティ事業</dd></div>
+        <div><dt data-k="c8">連絡先</dt><dd class="num">TEL 03-5641-6818<br>lintr@linktrust-pay.com</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 LinkTrust Pay Co., Ltd.</span>
+    <nav aria-label="Footer">
+      <a href="#business" data-k="nav1">事業内容</a>
+      <a href="#security" data-k="secT">情報セキュリティ基本方針</a>
+      <a href="#company" data-k="nav4">会社概要</a>
+      <a href="#contact" data-k="navcta">お問い合わせ</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+const T={
+zh:{corp:"LinkTrust Pay 株式会社",nav1:"业务内容",nav2:"优势",nav3:"发展历程",nav4:"公司概况",navcta:"联系我们",
+h1:"以支付为起点，<br>迈向 <em>AI 与智能出行</em>。",
+lead:"自 2009 年创立以来，我们从面向访日游客的二维码支付起步，逐步拓展到整合国内外支付的多元支付、IoT 支付、AI 解决方案和 EV 出行。以连接中日的无现金基础设施，打造下一代产业。",
+cta1:"咨询导入与合作",cta2:"查看业务",f1:"创立",f2:"业务领域",f3:"支持语言",
+b1:"无现金支付",b1s:"多元支付・支付终端・IoT 支付・跨境电商",b2:"AI 解决方案",b2s:"AI Gateway・AI 面试・AI 硬件・定制开发",b3:"EV 智能出行",b3s:"换电・EV 销售・综合管理平台",
+bizT:"业务内容",bizP:"以移动支付平台为基础，提供系统开发、OEM 及入境引流等一站式服务。",
+d1:"无现金支付",p1:"全球多元支付",p1d:"将国内外二维码支付整合到一个平台，可同时申请并统一导入多个支付品牌。",p1c:"日本本地 QR",
+p2:"支付终端「smart-pay」",p2d:"不易受网络环境影响的支付终端，可快速部署在收银台，同时支持访日游客与本地顾客付款。",
+p3:"支付＋（Plus）",p3d:"结合二维码支付与 IoT，让自动售货机、投币储物柜、停车场等无人设备实现无现金化。",
+p4:"跨境电商支付",p4d:"通过邮件发送支付链接，支持中日跨境电商与预约付款。日元与人民元即时换算，支持中日自动翻译，并可通过 API 对接。",
+p5:"医疗入境支付",p5d:"面向访日医疗旅游客户、支持高额医疗费用支付的解决方案。",
+p6:"AI 人脸识别支付・扫码点餐",p6d:"提供人脸识别支付，以及面向餐饮店的桌台点餐系统。",
+d2:"AI 解决方案",a1d:"从 Claude、GPT、Gemini 到 DeepSeek、Qwen 等中国主流模型，用一个 API Key 和日元余额统一调用的 AI 专用支付与管理平台，支持银行转账充值和日本合格发票。",a1m:"查看产品页面 →",
+a2:"AI 面试「IKEMEN（イケ面）」",a2d:"由 AI 承担初次面试、降低招聘工作量的面试 SaaS，提供云端版和可放置于门店或会场的自助终端版。",
+a3:"AI 硬件",a3d:"策划并开发「AI 推声杯垫」（用喜欢的声音对话）、面向门店的「AI 分身机器人系统」等嵌入 AI 的产品。",
+a4:"AI 定制开发",a4d:"对接内部数据的 AI、代理业务的 AI Agent、与现有系统集成等，按客户业务设计并实施。",a4m:"前往 AI 咨询窗口 →",
+d3:"EV 智能出行",e1:"EV 换电",e1d:"无需等待充电即可持续行驶的换电式电动出行服务。",
+e2:"EV・电动摩托车销售",e2d:"从事电动摩托车的进口销售，并与行业团体共同推进「小型出行共同项目」。",
+e3:"EV 综合管理平台「LMMP」",e3d:"统一管理车辆、电池与支付，支撑 EV 相关业务运营的平台。",
+sT:"我们的优势",sP:"正因为我们处理资金流动，AI 与出行业务也能连同计费和结算一起运营。",
+s1:"与支付品牌直接合作",s1d:"从申请、商户审核到运营一站式对接。向商户的入账以日元进行，无需外币换算。",
+s2:"连接日本与中国",s2d:"业务始于为访日游客提供支付代理服务，以日语、中文和英语支持两国企业与用户。",
+s3:"软硬件自主研发",s3d:"从支付平台、终端、AI 硬件到 EV 管理平台，均由我们自主策划和开发。",
+hT:"发展历程",h1t:"成立 LinkTrust Pay 株式会社，开始为访日中国游客提供手机二维码支付代理服务",
+h2t:"面向跨境电商，推出同时支持银联、支付宝、微信三大品牌的支付服务",
+h3t:"整合日本本地二维码支付，扩展为全球多元支付；推出支付终端「smart-pay」与 IoT 支付「支付＋」",
+h4t:"推出 AI 面试官系统",h5t:"发布生成式 AI 统一网关「LinkTrust AI Gateway」",
+cT:"联系我们・AI 咨询窗口",cP:"支付导入、AI 应用、与 EV 业务合作等，处于构想阶段的咨询也欢迎。",
+t1:"想为访日游客导入支付",t2:"想让无人设备实现无现金化",t3:"想统一多个 AI 的账单",t4:"想提高招聘面试效率",t5:"想开发 AI 产品",
+l1:"公司名称",l2:"联系人",l3:"邮箱",l4:"咨询领域",l5:"咨询内容",o1:"无现金支付",o2:"AI 面试 IKEMEN",o3:"AI 定制开发・AI 硬件",o4:"EV 智能出行",o5:"其他",send:"提交",
+secT:"信息安全基本方针",secP:"作为支付服务商，我们按以下方针保护客户的信息资产。",
+q1:"遵守法律与合同",q1d:"遵守《个人信息保护法》等相关法律，以及与支付品牌和客户之间的合同义务。",
+q2:"数据处理",q2d:"受托数据仅在约定目的范围内使用，未经许可不用于 AI 训练。",
+q3:"访问管理",q3d:"权限最小化，对管理后台与 API 的访问进行记录和监控。",
+q4:"持续改进",q4d:"定期开展员工培训与制度审查，发生事故时及时报告并处置。",
+coT:"公司概况",c1:"公司名称",c2:"成立",c2v:"2009 年 4 月",c3:"代表人",c3v:"代表董事　林 挺然",c4:"注册资本",c4v:"5,409.5 万日元",c5:"法人编号",c6:"地址",
+c6v:"〒163-0649<br>日本东京都新宿区西新宿 1-25-1 新宿中心大厦 49 层",c7:"经营范围",c7v:"无现金支付平台运营、系统开发及 OEM／入境引流支持／AI 解决方案开发与提供／EV 出行业务",c8:"联系方式",
+err:"请填写公司名称、联系人和正确的邮箱。",ok:"已收到填写内容（演示页面，不会实际发送）。"},
+en:{corp:"LinkTrust Pay Co., Ltd.",nav1:"Business",nav2:"Strengths",nav3:"History",nav4:"Company",navcta:"Contact",
+h1:"From payments,<br>to <em>AI and mobility</em>.",
+lead:"Since 2009 we have grown from QR code payments for visitors to Japan into multi-payment platforms, IoT payments, AI solutions and EV mobility. We build the next industries on cashless infrastructure that connects Japan and China.",
+cta1:"Talk to us about adoption or partnership",cta2:"See our business",f1:"Founded",f2:"Business domains",f3:"Languages",
+b1:"Cashless payments",b1s:"Multi-payment, terminals, IoT payments, cross-border e-commerce",b2:"AI solutions",b2s:"AI Gateway, AI interviews, AI devices, custom development",b3:"EV mobility",b3s:"Battery swapping, EV sales, fleet platform",
+bizT:"Our business",bizP:"Built on our mobile payment platform, we handle system development, OEM supply and inbound customer acquisition end to end.",
+d1:"Cashless payments",p1:"Global multi-payment",p1d:"Domestic and international QR payments on one platform. Apply for several payment brands at once and roll them out together.",p1c:"Japanese QR",
+p2:"smart-pay terminal",p2d:"A payment terminal that keeps working on unstable networks. Set it up at the register and accept payments from both visitors and local customers.",
+p3:"Payment Plus",p3d:"QR payments combined with IoT make vending machines, coin lockers and parking lots cashless.",
+p4:"Cross-border e-commerce payments",p4d:"Payment links sent by email for Japan–China e-commerce and advance bookings, with instant yen–RMB conversion, automatic Japanese–Chinese translation and an API for integration.",
+p5:"Medical tourism payments",p5d:"A payment solution for the high-value medical bills of medical tourists visiting Japan.",
+p6:"AI face payment and table ordering",p6d:"Face-recognition payments, and a table ordering system for restaurants.",
+d2:"AI solutions",a1d:"One API key and a yen balance for Claude, GPT and Gemini as well as major Chinese models such as DeepSeek and Qwen. An AI-specific billing and management platform with bank-transfer top-ups and qualified invoices.",a1m:"Visit the service site →",
+a2:"IKEMEN AI interviews",a2d:"Interview SaaS where AI runs first-round interviews and cuts recruiting workload. Available in the cloud and as a kiosk for stores and venues.",
+a3:"AI devices",a3d:"We design and build products with AI inside, such as the AI voice coaster that talks in a voice you choose and the AI avatar robot system for shops.",
+a4:"Custom AI development",a4d:"AI connected to your internal data, AI agents that take on routine work, and integration with your existing systems, designed around how you operate.",a4m:"Go to AI consultation →",
+d3:"EV mobility",e1:"EV battery swapping",e1d:"Electric mobility that keeps moving: swap the battery instead of waiting to charge.",
+e2:"EV and e-motorcycle sales",e2d:"We import and sell electric motorcycles and run a small-mobility joint project with industry associations.",
+e3:"LMMP fleet platform",e3d:"One platform to manage vehicles, batteries and payments for EV businesses.",
+sT:"Why LinkTrust Pay",sP:"Because we handle money flows, we can run AI and mobility services including billing and settlement.",
+s1:"Direct work with payment brands",s1d:"We handle applications, merchant screening and operation in one place. Merchants are paid in yen, so there is no currency conversion on their side.",
+s2:"Connecting Japan and China",s2d:"We started as a payment agent for visitors to Japan, and support companies and users in both countries in Japanese, Chinese and English.",
+s3:"Software and hardware in-house",s3d:"Payment platforms, terminals, AI devices and EV management are all planned and built by our own team.",
+hT:"History",h1t:"LinkTrust Pay Co., Ltd. founded. Started acting as a mobile QR payment agent for Chinese visitors to Japan.",
+h2t:"Launched a cross-border e-commerce payment service supporting UnionPay, Alipay and WeChat Pay at the same time.",
+h3t:"Added Japanese QR payments and expanded into global multi-payment; launched the smart-pay terminal and Payment Plus IoT payments.",
+h4t:"Launched the AI interviewer system.",h5t:"Announced LinkTrust AI Gateway, a unified gateway for generative AI.",
+cT:"Contact & AI consultation",cP:"Payments, AI or EV partnerships: talk to us even if your plans are still early.",
+t1:"Accept payments from visitors",t2:"Make unattended equipment cashless",t3:"Consolidate bills for several AI models",t4:"Streamline recruiting interviews",t5:"Build a product with AI",
+l1:"Company",l2:"Your name",l3:"Email",l4:"Topic",l5:"Message",o1:"Cashless payments",o2:"IKEMEN AI interviews",o3:"Custom AI / AI devices",o4:"EV mobility",o5:"Other",send:"Send",
+secT:"Information security policy",secP:"As a payment provider, we protect our customers' information under the following policy.",
+q1:"Compliance",q1d:"We follow Japan's Act on the Protection of Personal Information and other laws, and our obligations to payment brands and customers.",
+q2:"Data handling",q2d:"Data entrusted to us is used only for the agreed purpose and never used to train AI without permission.",
+q3:"Access control",q3d:"Access is limited to the minimum needed, and access to admin screens and APIs is logged and monitored.",
+q4:"Continuous improvement",q4d:"We train staff, review our controls regularly, and report and respond quickly to any incident.",
+coT:"Company profile",c1:"Company name",c2:"Founded",c2v:"April 2009",c3:"Representative",c3v:"Tingran Lin, Representative Director",c4:"Capital",c4v:"JPY 54,095,000",c5:"Corporate number",c6:"Address",
+c6v:"49F Shinjuku Center Building, 1-25-1 Nishi-Shinjuku,<br>Shinjuku-ku, Tokyo 163-0649, Japan",c7:"Business",c7v:"Operation, development and OEM supply of cashless payment platforms; inbound customer acquisition; AI solutions; EV mobility",c8:"Contact",
+err:"Please enter your company, name and a valid email address.",ok:"Received (this is a demo page, so nothing was actually sent)."}
+};
+const els=[...document.querySelectorAll('[data-k]')];
+const ja={}; els.forEach(e=>{ if(!(e.dataset.k in ja)) ja[e.dataset.k]=e.hasAttribute('data-html')?e.innerHTML:e.textContent; });
+ja.err='会社名・ご担当者名・メールアドレスを正しく入力してください。';
+ja.ok='入力内容を受け付けました（デモページのため実際には送信されません）。';
+T.ja=ja;
+let cur='ja';
+function set(l){
+  if(!T[l]) l='ja'; cur=l;
+  document.documentElement.lang = l==='zh'?'zh-CN':l;
+  els.forEach(e=>{const v=T[l][e.dataset.k]; if(v==null) return; if(e.hasAttribute('data-html')) e.innerHTML=v; else e.textContent=v;});
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.lang===l));
+  try{localStorage.setItem('ltp-lang',l)}catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>set(b.dataset.lang)));
+let saved=null; try{saved=localStorage.getItem('ltp-lang')}catch(e){}
+if(saved && saved!=='ja') set(saved);
+
+const f=document.getElementById('form'), st=document.getElementById('status');
+f.addEventListener('submit',e=>{
+  e.preventDefault();
+  const req=['f-company','f-name','f-email'].map(id=>document.getElementById(id));
+  const miss=req.find(i=>!i.value.trim()||(i.type==='email'&&!i.checkValidity()));
+  st.textContent=T[cur][miss?'err':'ok']; st.hidden=false; if(miss) miss.focus();
+});
+})();
+</script>
+</body>
+</html>
